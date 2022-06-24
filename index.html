@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="scripts/wow/css/libs/animate.css">
-	<link rel="stylesheet" type="text/css" href="scripts/aos/aos.css">
-
+	<!-- <link rel="stylesheet" type="text/css" href="scripts/aos/aos.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css">
+	<!-- <link rel="stylesheet" type="text/css" href="scripts/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/font/icomoon/style.css?v=1">
 	<link href="scripts/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css" rel="stylesheet">
@@ -208,13 +210,19 @@
 	<div id="cursor"></div>
 	
 	<script src="scripts/jquery-3.2.1.min.js"></script>
-	<script src="scripts/modernizr.js"></script>
-	<script src="scripts/wow/dist/wow.min.js"></script>
-	<script src="scripts/aos/aos.js"></script>
-	<script src="scripts/parallax.js"></script>
-	<script src="scripts/lottie.js"></script>
-	<link rel="stylesheet" type="text/css" href="scripts/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-	<script src="scripts/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<!-- <script src="scripts/modernizr.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<!-- <script src="scripts/wow/dist/wow.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<!-- <script src="scripts/aos/aos.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- <script src="scripts/parallax.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<!-- <script src="scripts/lottie.js"></script> -->
+	<script src="https://unpkg.com/lottie-web@5.8.1/build/player/lottie.js"></script>
+	<!-- <script src="scripts/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	
 	<!-- <script src="scripts/lottie-scale.js"></script> -->
 	<script>
 		var winsize = {width:'1920', height:'1080'}
@@ -288,9 +296,9 @@
 
 		$(document).ready(function(){
 			var web_url = window.location.href;
-			var web_url_before = web_url.substr(0, web_url.indexOf('index.html')*1+10)
-			if(web_url.indexOf('index.html') != -1){
-				if(web_url.substr(web_url.indexOf('index.html')*1+9, 2)=='l#'){
+			var web_url_before = web_url.substr(0, web_url.indexOf('portfolio/')*1+10)
+			if(web_url.indexOf('index.html') != -1 || web_url.indexOf('portfolio/') != -1){
+				if((web_url.substr(web_url.indexOf('index.html')*1+9, 2)=='l#')||(web_url.substr(web_url.indexOf('portfolio/')*1+8, 3)=='o/#')){
 					setTimeout(function () {
 						$(".menu .about").trigger('click');
 					}, 300);
